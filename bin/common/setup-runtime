@@ -67,7 +67,7 @@ elif [[ $requires_pio_version =~ ^0\.11 ]]
   PIO_BUILD_SPARK_VERSION=2.1.0
 elif [[ $requires_pio_version =~ ^0\.12 ]]
   then
-  PIO_VERSION=0.12.0
+  PIO_VERSION=0.12.0-incubating
   PREDICTIONIO_DIST_URL="${PREDICTIONIO_DIST_URL:-https://dist.apache.org/repos/dist/release/incubator/predictionio/0.12.0-incubating/apache-predictionio-0.12.0-incubating-bin.tar.gz}"
 else
   echo "The PredictionIO version specified in template.json ($requires_pio_version) is not compatible." | indent
