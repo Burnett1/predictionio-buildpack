@@ -67,15 +67,15 @@ elif [[ $requires_pio_version =~ ^0\.11 ]]
   PIO_BUILD_SPARK_VERSION=2.1.0
 elif [[ $requires_pio_version =~ ^0\.12 ]]
   then
-  PIO_VERSION=0.12.0-incubating
-  PREDICTIONIO_DIST_URL="${PREDICTIONIO_DIST_URL:-https://dist.apache.org/repos/dist/release/incubator/predictionio/0.12.0-incubating/apache-predictionio-0.12.0-incubating-bin.tar.gz}"
+  PIO_VERSION=0.12.1
+  PREDICTIONIO_DIST_URL="${PREDICTIONIO_DIST_URL:-https://dist.apache.org/repos/dist/release/predictionio/0.12.1/apache-predictionio-0.12.1-bin.tar.gz}"
 else
   echo "The PredictionIO version specified in template.json ($requires_pio_version) is not compatible." | indent
   exit 1
 fi
 
 PIO_BUILD=PredictionIO-${PIO_VERSION}
-SPARK_VERSION="spark-${PIO_BUILD_SPARK_VERSION:-2.2.1}-bin-hadoop${PIO_BUILD_HADOOP_VERSION:-2.7}"
+SPARK_VERSION="spark-${PIO_BUILD_SPARK_VERSION:-2.2.0}-bin-hadoop${PIO_BUILD_HADOOP_VERSION:-2.7}"
 
 # PredictionIO dist tarball URL, expects `.tar.gz` 
 default_url="https://marsikai.s3.amazonaws.com/${PIO_BUILD}.tar.gz"

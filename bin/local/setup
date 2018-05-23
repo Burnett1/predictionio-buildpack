@@ -55,7 +55,7 @@ echo
 echo 'If the authenticated Elasticsearch patch is required,'
 echo 'then revise `build.sbt`:'
 echo
-echo '  * update: pioVersion = "0.12.0-SNAPSHOT"'
+echo '  * update: pioVersion = "0.12.1"'
 echo '  * append: resolvers += "Buildpack Repository" at "file://"+baseDirectory.value+"/repo"'
 echo
 echo 'PredictionIO is setup 🐸'
