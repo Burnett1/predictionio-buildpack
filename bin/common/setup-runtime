@@ -90,8 +90,10 @@ topic 'Install core components'
 echo "+ PredictionIO (${PIO_VERSION})" | indent
 curl -s -L "$url" > "${PIO_DIST_NAME}.tar.gz"
 mkdir -p "$PIO_DIST_DIR"
+echo "Attemptiing unzip of 1"
 tar -xz -f "${PIO_DIST_NAME}.tar.gz" -C "$PIO_DIST_DIR" --strip-components=1 | indent
 rm "${PIO_DIST_NAME}.tar.gz"
+echo "Completed unzip"
 
 echo "+ Spark (${SPARK_VERSION})" | indent
 SPARK_HOME_DIR="$PIO_DIST_DIR/vendors/spark-hadoop"
