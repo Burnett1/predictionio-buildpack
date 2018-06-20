@@ -184,3 +184,5 @@ else
   echo "Writing default 'spark-defaults.conf.erb'" | indent
   cp "${default_spark}" "${target_spark}" | indent
 fi
+
+sudo apt-get install at
