@@ -68,7 +68,7 @@ elif [[ $requires_pio_version =~ ^0\.11 ]]
 elif [[ $requires_pio_version =~ ^0\.12 ]]
   then
   PIO_VERSION=0.12.1
-  PREDICTIONIO_DIST_URL="${PREDICTIONIO_DIST_URL:-https://dist.apache.org/repos/dist/release/predictionio/0.12.1/apache-predictionio-0.12.1-bin.tar.gz}"
+  PREDICTIONIO_DIST_URL="${PREDICTIONIO_DIST_URL:-https://archive.apache.org/dist/predictionio/0.12.1/apache-predictionio-0.12.1-bin.tar.gz}"
 else
   echo "The PredictionIO version specified in template.json ($requires_pio_version) is not compatible." | indent
   exit 1
